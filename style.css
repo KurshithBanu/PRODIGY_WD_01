@@ -31,10 +31,7 @@ body {
 .navbar ul {
     list-style: none;
     display: flex;
-}
-
-.navbar ul li {
-    margin: 0 15px;
+    gap: 15px;
 }
 
 .navbar ul li a {
@@ -48,11 +45,10 @@ body {
     color: #ffeeee;
 }
 
-/* Page Content */
+/* Hero Section */
 .hero {
     height: 100vh;
-    width: 1000px;
-    margin-left: 180px;
+    width: 100%;
     background: url("gift2.jpeg") no-repeat center/cover;
     display: flex;
     flex-direction: column;
@@ -63,12 +59,12 @@ body {
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: rgb(255, 255, 255);
 }
 
 .content {
-    padding: 100px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
@@ -85,17 +81,13 @@ body {
     border-radius: 10px;
 }
 
-.about-container img {
-    margin-bottom:20px;
-    max-width: 450px;
-}
 .shop-item {
     max-width: 300px;
     text-align: center;
 }
 
 .shop-item h3 {
-    margin: 10px 10px;
+    margin: 10px 0;
 }
 
 .contact-form {
@@ -103,7 +95,6 @@ body {
     flex-direction: column;
     max-width: 400px;
     margin: 0 auto;
-    margin-right:5px;
 }
 
 .contact-form input, .contact-form textarea, .contact-form button {
@@ -126,7 +117,7 @@ body {
 .contact-details {
     flex: 1;
     max-width: 400px;
-    margin-right: 100px;
+    margin-right: 20px;
 }
 
 .footer {
@@ -134,4 +125,60 @@ body {
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        padding: 0 10px;
+    }
+
+    .about-container img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .shop-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .shop-item {
+        max-width: 90%;
+    }
+
+    .contact-details {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .contact-form {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        height: 80vh;
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
 }
